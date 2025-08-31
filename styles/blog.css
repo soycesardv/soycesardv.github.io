@@ -2,18 +2,19 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .contenedor {
 	width: 100%;
 	min-height: 100vh;
-	background: white;
+	background: rgb(158, 158, 158);
 }
 
 /*comienza navbar*/
 
 .navbar {
 	width: 100%;
-	height: 60px;
+	height: 70px;
 	margin: auto;
 	display: flex;
 	align-items: center;
@@ -64,10 +65,10 @@
 /*comienza el cuerpo*/
 
 .bloque-texto {
-	width: 50%;
+	width: 80%;
 	min-height: 60vh;
 	margin: calc(60px + 75px) auto;
-	background: none;
+	background-color: none;
 }
 .bloque-texto h1 {
 	font-size: 50px;
