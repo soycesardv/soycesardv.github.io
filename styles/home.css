@@ -1,230 +1,284 @@
+/* Importamos una fuente moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+    /* Paleta de Colores Profesional */
+    --bg-color: #0f172a;       /* Azul oscuro profundo */
+    --card-bg: #1e293b;        /* Un poco más claro para tarjetas */
+    --text-primary: #f1f5f9;   /* Blanco casi puro */
+    --text-secondary: #94a3b8; /* Gris azulado para textos secundarios */
+    --accent: #38bdf8;         /* Cian brillante para destacar */
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s ease;
+}
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Fuente mucho más moderna */
 }
 
-/* Contenedor */
-
-.contenedor {
-	width: 100%;
-	min-height: 100vh;
-	background-color: #080808;
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
 }
 
-/* Barra de Navegacion */
-
+/* --- NAVBAR --- */
 .navbar {
-    height: 60px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    background: #0a0b0c;
+    padding: 0 5%;
+    background: rgba(15, 23, 42, 0.9); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px);        /* Efecto borroso detrás */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+
 .logo-cesar {
-	color: white;
-	margin: 0 40px;
-	font-size: 20px;
-	font-weight: 700;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-}
-.menu-navbar{
-	display: flex;
-	list-style: none;
-	margin-right: 40px;
-}
-.items-navbar{
-	list-style: none;
-	margin: 0 20px;
-	align-items: center;
-	font-size: 20px;
-	font-weight: 500;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.items-navbar img {
-	width: 24px;
-}
-.items-navbar a {
-	text-decoration: none;
-	color:  white;
-}
-/* Contenedor sub navbar */
-
-.contenedor_sub-navbar {
-	width: 100%;
-	height: 400px;
-	background: #0a0b0c;
-	text-align: center;
-}
-.contenedor_sub-navbar > .borde-image {
-	margin: auto;
-	overflow: hidden;
-	width: 250px;
-	height: 250px;
-	border:  2px solid #000000;
-	border-radius: 50%;
-	margin-bottom: 15px;
-}
-.contenedor_sub-navbar img {
-	width: 100%;
-	height: 100%;
-}
-.contenedor_sub-navbar > h1 {
-	color : #fff;
-	font-size: 44px;
-	font-weight: 900;
-	margin-bottom: 5px;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.contenedor_sub-navbar > h2 {
-	color : #eeeeee;
-	font-weight: 300;
-	font-size: 24px;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-/* Contenido de la pagina*/
-
-.contenedor-page {
-	width: 100%;
-	min-height: 700px;
-	background-image: url("../images/wallpaperpage.jpeg");
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-}
-
-/* Cuadro de contenido "Una vida de aventura" */
-
-.contenedor-informacion {
-	width: 70%;
-    min-height: 550px;
-    border: 2px #bebebe;
-    border-style: solid;
-    border-radius: 2%;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin: auto;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-}
-.margin {
-	height: 50px;
-}
-.contenedor-informacion > .titulo {
-    padding: 20px 0px;
-    font-size: 50px;
+    color: var(--accent);
+    font-size: 24px;
     font-weight: 800;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.contenedor-informacion > .parrafo {
-	max-width: 800px;
-	color: #202020;
-	font-size: 20px;
-	font-weight: 400;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	text-align: center;
-	margin: 20px;
-}
-.borde {
-	margin: auto;
-	overflow: hidden;
-	max-width: 250px;
-	max-height: 260px;
-	border:  2px solid #00000000;
-	border-radius: 10%;
-	margin: 20px;
-	margin: 20px auto;
-}
-.borde > img {
-	width: 100%;
-	height: 100%;
+    letter-spacing: 1px;
 }
 
-/*Cuadro de contenido "Experiencia"*/
-
-.contenedor_sub-page {
-	height: 80vh;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	width: 80%;
-	max-width: 1100px;
-	margin: 40px auto;
-	gap: 30px;
-	color: #000000;
+.menu-navbar {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Espacio entre items */
 }
 
-.contenedor_datos-personales, .contenedor_experiencia {
-	flex: 1;
-	height: 100%;
+.items-navbar a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: var(--transition);
 }
 
-.sub-contenedor_datos-personales, .sub-contenedor-experiencia {
-	background: #ebebeb;
-	padding: 20px;
-	border-radius: 12px;
-	box-shadow: 0 4px 10px rgba(149, 149, 149, 0.5);
-	height: 100%;
+.items-navbar a:hover {
+    color: var(--accent);
 }
 
-.subtitulo {
-	margin-bottom: 15px;
-	border-bottom: 2px solid #959595;
-	padding-bottom: 10px;
-	font-size: 44px;
-	font-weight: 900;
+.items-navbar img {
+    width: 24px;
+    vertical-align: middle;
+    filter: invert(100%); /* Asegura que el icono sea blanco */
 }
 
-ul {
-	list-style: square;
-	padding-left: 30px;
-	font-size: 20px;
-	font-weight: 400;
-}
-
-.parrafo {
-	margin: 10px 0;
-}
-.imagenes-lenguajes {
-	display: flex;
-	gap: 10px;
-	align-items: center;
-	justify-content: center;
-	list-style: none;
-}
-
-/* Pie de página */
-
-.pie {
-	position: relative;
-	background-color: #0a0b0c;
-	color: #dfdfdf;
-}
-.footer-contenido {    
-	margin: auto;
-    padding: 12px;
+/* --- HERO SECTION (Perfil Principal) --- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding-top: 80px;
+    background: radial-gradient(circle at top, #1e293b 0%, #0f172a 70%);
 }
-.footer-contenido > p {
-	display: inline;
-	font-size: 12px;
-	padding-right: 1em;
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in;
 }
-.footer-contenido > a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 13px;
-	transition: color 0.5s;
+
+.profile-img-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--accent);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
-.footer-contenido > a:hover {
-	color: #b6b6b6;
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Texto degradado */
+}
+
+.hero-content h2 {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* --- SECCIÓN SOBRE MÍ --- */
+.about-section {
+    padding: 80px 5%;
+    background: var(--bg-color);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.about-img img:hover {
+    transform: scale(1.02);
+}
+
+/* --- GRID DE EXPERIENCIA Y DATOS (Tarjetas) --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card li {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 10px;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-icons img {
+    height: 30px;
+    transition: var(--transition);
+}
+
+.tech-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* --- FOOTER --- */
+.pie {
+    background: #020617;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-contenido p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.footer-contenido a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .menu-navbar {
+        display: none; /* Podrías agregar un menú hamburguesa aquí después */
+    }
+}
+
+.typewriter {
+    color: var(--accent); /* Usamos tu color cyan */
+    border-right: 2px solid var(--accent);
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

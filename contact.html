@@ -1,12 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cesar David | Contact</title>
-	<link rel="stylesheet" type="text/css" href="./styles/contact.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesar David | Contacto</title>
+    <link rel="stylesheet" href="./styles/contact.css">
 </head>
 <body>
+  
+    <nav class="navbar">
+      <div class="logo-cesar">CESAR DAVID</div>
+      <ul class="menu-navbar">
+        <li class="items-navbar"><a href="index.html">HOME</a></li>
+        <li class="items-navbar"><a href="blog.html">BLOG</a></li>
+        <li class="items-navbar active"><a href="contact.html" style="color: var(--accent);">CONTACTO</a></li>
+      </ul>
+    </nav>
 
+    <div class="contact-container">
+      <div class="contact-wrapper">
+        
+        <div class="contact-info">
+          <h2>Hablemos</h2>
+          <p>¿Tienes una idea para un proyecto, una oferta laboral o simplemente quieres hablar de tecnología? Estoy siempre disponible para nuevos retos.</p>
+          
+          <ul class="social-links">
+            <li><a href="mailto:soycesardv@gmail.com">📩 soycesardv@gmail.com</a></li>
+            <li><a href="https://github.com/soycesardv" target="_blank">🐙 GitHub /soycesardv</a></li>
+            <li><a href="https://linkedin.com/in/soycesardv" target="_blank">💼 LinkedIn</a></li>
+            <li><a href="https://instagram.com/soycesardv" target="_blank">📸 Instagram @soycesardv</a></li>
+          </ul>
+        </div>
+
+        <div class="contact-form">
+          <form id="contact-form" action="https://formspree.io/f/mpwvrqpq" method="post">
+            
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Cesar David" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+            </div>
+
+            <button type="submit" id="btn-submit" class="btn-submit">Enviar Mensaje 🚀</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      © 2024 Cesar David Castillo. Hecho con código y café.
+    </footer>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

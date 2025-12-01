@@ -1,0 +1,224 @@
+/* Importamos la misma fuente para consistencia */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --input-bg: #020617; /* Fondo más oscuro para inputs */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent: #38bdf8;
+  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  /* Un toque de degradado sutil de fondo */
+  background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- NAVBAR (Copia exacta del Home para consistencia) --- */
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo-cesar {
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.menu-navbar {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.items-navbar a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.items-navbar a:hover {
+  color: var(--accent);
+}
+
+/* --- SECCIÓN PRINCIPAL --- */
+.contact-container {
+  flex: 1; /* Empuja el footer hacia abajo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 40px; /* Padding top alto para compensar navbar fija */
+}
+
+.contact-wrapper {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* División asimétrica: 40% info, 60% form */
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Columna Izquierda: Info */
+.contact-info {
+  background: rgba(56, 189, 248, 0.1); /* Acento muy suave */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+.contact-info p {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.social-links {
+  list-style: none;
+}
+
+.social-links li {
+  margin-bottom: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+/* Columna Derecha: Formulario */
+.contact-form {
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* Inputs Modernos */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background: var(--accent);
+  color: #0f172a; /* Texto oscuro para contraste */
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-submit:hover {
+  background: #0ea5e9; /* Un tono más oscuro de cyan */
+  transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr; /* Una sola columna en móvil */
+  }
+  
+  .contact-info {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .social-links a {
+    justify-content: center;
+  }
+  
+  .navbar {
+    padding: 0 20px;
+  }
+  
+  .menu-navbar {
+    display: none; /* Ocultar menú en móvil por ahora */
+  }
+}
