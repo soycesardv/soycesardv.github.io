@@ -167,3 +167,82 @@ body {
   color: var(--accent);
   text-decoration: none;
 }
+
+/* --- VISTA DE ARTÍCULO INDIVIDUAL --- */
+.article-container {
+  max-width: 800px; /* Ancho máximo para lectura cómoda */
+  margin: 120px auto 60px; /* Margen superior para librar el navbar */
+  padding: 0 20px;
+}
+
+.article-header {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 40px;
+}
+
+.article-header h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.article-meta {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.article-body {
+  font-size: 1.1rem;
+  line-height: 1.8; /* Importante para que no canse la vista */
+  color: #d1d5db;
+}
+
+.article-body h2 {
+  color: var(--text-primary);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.article-body p {
+  margin-bottom: 20px;
+}
+
+/* Bloques de código dentro del artículo */
+pre {
+  background: #020617;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  margin-bottom: 20px;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--accent);
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border: 1px solid var(--text-secondary);
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: var(--transition);
+}
+
+.btn-back:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Color especial para la etiqueta de viajes */
+.tag.viajes {
+  background: rgba(255, 165, 0, 0.1); /* Naranja suave */
+  color: orange;
+}
