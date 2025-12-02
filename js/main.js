@@ -1,6 +1,6 @@
 // Lógica para el efecto de máquina de escribir
 const textElement = document.querySelector('.typewriter');
-const phrases = ['Cesar David Castillo Gomez','Ingeniero en Formación.', 'Software Developer.', 'Entusiasta Web3.', 'Amante de las Motos.'];
+const phrases = ['Ingeniero en Formación.', 'Software Developer.', 'Entusiasta Web3.'];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -79,5 +79,16 @@ if (contactForm) {
             btnSubmit.innerText = originalText;
             btnSubmit.disabled = false;
         }
+    });
+}
+
+// --- Lógica del Menú Hamburguesa ---
+const menuToggle = document.querySelector('#mobile-menu');
+const menuNavbar = document.querySelector('.menu-navbar');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('is-active'); // Anima el botón a una X
+        menuNavbar.classList.toggle('active');    // Desliza el menú
     });
 }
