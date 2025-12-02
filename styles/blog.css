@@ -296,4 +296,59 @@ code {
     .menu-toggle.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    /* --- MEJORAS VISUALES PARA MÓVIL --- */
+
+    /* 1. Encabezado más compacto: Menos "aire" arriba */
+    .blog-header {
+        padding: 100px 20px 30px; /* Reducimos el padding */
+    }
+    
+    .blog-header h1 {
+        font-size: 2rem; /* Bajamos de 3rem a 2rem para que quepa bien */
+        line-height: 1.2;
+    }
+
+    .blog-header p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* 2. Grid optimizado: Aseguramos que ocupe el ancho sin bordes gigantes */
+    .blog-grid {
+        display: flex;        /* Cambiamos a Flex en móvil para control total vertical */
+        flex-direction: column;
+        padding: 0 20px 40px; /* Menos padding lateral */
+        gap: 20px;            /* Menos espacio entre tarjetas */
+    }
+
+    /* 3. Tarjetas: Aprovechar espacio */
+    .article-card {
+        padding: 20px; /* Reducimos el relleno interno de la tarjeta */
+    }
+
+    .article-card h2 {
+        font-size: 1.3rem; /* Títulos de artículos más manejables */
+    }
+
+    /* 4. Vista de Lectura (Artículo Individual) */
+    .article-container {
+        margin-top: 100px; /* Menos margen superior */
+        padding: 0 20px;   /* Texto no pegado a los bordes */
+    }
+
+    .article-header h1 {
+        font-size: 1.8rem; /* Título del post ajustado */
+    }
+
+    .article-body {
+        font-size: 1rem;   /* Texto de lectura cómodo para pantallas pequeñas */
+        text-align: left;  /* Alineación natural */
+    }
+    
+    /* Ajuste para que los bloques de código no rompan el ancho */
+    pre {
+        padding: 15px;
+        font-size: 0.85rem; /* Código un poco más pequeño */
+    }
 }
